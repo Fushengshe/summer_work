@@ -3,12 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
-    <style>
-
-    </style>
-    <script>
-
-    </script>
 </head>
 <body>
 <script>
@@ -43,12 +37,12 @@
         console.log(obj.age);
         console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 //         2.
-        function creatObject(username,passwd) {
+        function creatObject(username,password) {
             var obj =new Object();
             obj.name = username;
-            obj.passwd = passwd;
+            obj.password = password;
             obj.get = function () {
-                alert(this.name + ","+this.passwd);
+                console.log(this.name + ","+this.password);
             }
             return obj;
         }
@@ -56,11 +50,11 @@
         obj1.get();
 
 //      3.
-        function Person(username , passwd) {
+        function Person(username , password) {
             this.username = username;
-            this.password =passwd;
+            this.password =password;
             this.getInfo = function () {
-                alert(this.username + ","+this.password);
+                console.log(this.username + ","+this.password);
             }
         }
         var person =new Person("raoul1996","unkown");
@@ -76,7 +70,7 @@
             Persona.prototype.username = "RaoulBaby";
             Persona.prototype.password = "unknow";
             Persona.prototype.getInfo = function () {
-                alert(this.username+","+this.password);
+                console.log(this.username+","+this.password);
             }
         var person1 = new Persona();
         var person2 = new Persona();
@@ -88,7 +82,7 @@
         Personb.prototype.username = new Array(0);
         Personb.prototype.password = "unknow";
         Personb.prototype.getInfo = function () {
-            alert(this.username+","+this.password);
+            console.log(this.username+","+this.password);
         }
         var person3 = new Personb();
         var person4 = new Personb();
@@ -100,16 +94,39 @@
 //       c.使用原型和构造函数方式创建对象
         function PersonF() {
             this.username = new Array(0);
-
+            this.password ="test";
         }
+        PersonF.prototype.getInfo =function () {
+            console.log(this.username + "," +this.password);
+        }
+        var person5 =new PersonF();
+        var person6 =new PersonF();
+        person5.username.push("RaoulNoF");
+        person5.username.push("RaoulNooF");
+        person6.username.push("RaoulYesF");
+        person6.username.push("RaoulYessF");
+        person5.getInfo();
+        person6.getInfo();
+        /**
+         *5.动态原型方式：在构造函数中通过标志量让所有对象共享一个方法，而每对象拥有自己的属性。
+         */
+        function PersonFF(){
+            this.username = "Mitch"
+            this.password = "lslslsls"
+            if (typeof PersonFF.flag == "undefined"){
+                PersonFF.prototype.getInfo = function () {
+                    console.log(this.username + "," +this.password);
+                }
+                PersonFF.flag = true;
+            }
+        }
+        var p = new PersonFF();
+        var p2 = new PersonFF();
+        p.getInfo();
+        p2.getInfo();
 
 
-
-
-
-
-
-
+        console.log("___________________________________________________________________________")
     }
 </script>
 </body>
