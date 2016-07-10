@@ -53,14 +53,14 @@
             return obj;
         }
         var obj1 =creatObject("Raoul","unknow");
-//            obj1.get();
+        obj1.get();
 
 //      3.
         function Person(username , passwd) {
             this.username = username;
             this.password =passwd;
             this.getInfo = function () {
-                alert(this.name + ","+this.passwd);
+                alert(this.username + ","+this.password);
             }
         }
         var person =new Person("raoul1996","unkown");
@@ -71,8 +71,35 @@
          *缺点：创建的多个对象在共享同一个方法的同时也共享了同样的属性(username,password)，实际开发中这样儿是不行的，必须是多个对象都要有自己的属性。
          * 采用该方式创建对象通常是用来扩展已有对象的某一个方法。
          */
-        function PersonP() {
-            PersonP.prototype.username =
+//        a.
+        function Persona() {}
+            Persona.prototype.username = "RaoulBaby";
+            Persona.prototype.password = "unknow";
+            Persona.prototype.getInfo = function () {
+                alert(this.username+","+this.password);
+            }
+        var person1 = new Persona();
+        var person2 = new Persona();
+        person1.username ="RaoulYes";
+        person1.getInfo();
+        person2.getInfo();
+//        b.如果使用原型方式创建对象，那么生成的对象将会共享原型中的属性，这样一个对象改变了该属性也会反映到其他的对象上。
+        function Personb() {}
+        Personb.prototype.username = new Array(0);
+        Personb.prototype.password = "unknow";
+        Personb.prototype.getInfo = function () {
+            alert(this.username+","+this.password);
+        }
+        var person3 = new Personb();
+        var person4 = new Personb();
+        person3.username.push("RaoulNo");
+        person3.username.push("RaoulNoo");
+        person3.password="Iknow";
+        person3.getInfo();
+        person4.getInfo();
+//       c.使用原型和构造函数方式创建对象
+        function PersonF() {
+            this.username = new
         }
 
 
