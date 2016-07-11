@@ -125,29 +125,60 @@
         var p2 = new PersonFF();
         p.getInfo();
         p2.getInfo();
-        console.dir("_______________________________下面是js数组____________________________________________");
+        console.dir("+++++++++++下面是js数组++++++++++++++++++++++++++++");
 //        var a =new Array(0);
 //        http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html
-        var a = ["a" , "jfd", "NULL" , "0" , 0 ];
-        console.dir(a);
+        var c = ["a" , "jfd", "NULL" , "0" , 0 ];
+        console.dir(c);
         var b = Array([5,3,5],[6,2,3]);//2维数组
         console.dir(b);
 //        数组元素的访问.
-        var testGetArrValue = a[1];
+        var testGetArrValue = c[1];
         console.log(testGetArrValue);
-        a[1] = "change";
-        console.dir(a);
+        c[1] = "change";
+        console.dir(c);
 //        数组元素的添加
         var arrayObj = new Array(0);
         arrayObj =[1,2,3,4,5,6,7];
         console.log(arrayObj);
-        console.dir(arrayObj);
         arrayObj.push(8,9);//在数组尾部添加元素,并返回数组长度.
-        console.dir(arrayObj);
+        console.log(arrayObj);
         arrayObj.unshift(-2,-1);//数组
-        console.dir(arrayObj);
-        arrayObj.splice(insertPos,2,[0]);
-        console.dir(arrayObj);
+        console.log(arrayObj);
+        arrayObj.splice(2,0,0);//中间的一个参数代表把从指定位置开始计算数目的数组元素替换为其后边的所有元素，并不仅限于单个元素。
+        console.log(arrayObj);
+        //数组元素的删除。
+        console.log("++++++++++++++数组元素的删除+++++++++++++++++=");
+        console.log(arrayObj);
+        var test = arrayObj.pop();//delete the last element of the array and return the element's value.
+        console.log("the  pop() return value:"+test);
+        console.log(arrayObj);
+        var test1 = arrayObj.shift();//delete the first element of the array and  return the element's value ,The remaining elements will go forward.
+        console.log("the  shift() return value:"+test1);
+        console.log(arrayObj);
+        var test2=arrayObj.splice(2,3);
+        console.log("the  splice(2,3) return value:"+test2);
+        console.log(arrayObj);
+        console.log("+++++++++++数组的截取和合并++++++++++++++++++++");
+        arrayObj=[-2,-1,0,1,2,3,4,5,6,7,8];
+        console.log(arrayObj);
+        var arrayObjP1 = arrayObj.slice(5);//return a part of the array of the type of array.NOTICE:the nwe array not include the end....
+        console.log(arrayObjP1);
+        var arrayObjP2 =arrayObj.slice(0,4);
+        console.log(arrayObjP2);
+        console.log(arrayObj);
+        var arrayObjB = arrayObjP1.concat("test");
+        console.log(arrayObjB);
+        console.log("++++++++++++++++++++数组的拷贝+++++++++++");
+        var arrayObjC1 = arrayObj.slice(0);
+        console.log(arrayObjC1);
+        var arrayObjC2 = arrayObj.concat();
+        console.log(arrayObjC2);
+        console.log("+++++++++++++数组的排序+++++++++++++");
+
+
+
+
 
 
 
