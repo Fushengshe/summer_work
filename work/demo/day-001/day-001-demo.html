@@ -127,10 +127,33 @@
         p2.getInfo();
         console.dir("_______________________________下面是js数组____________________________________________");
 //        var a =new Array(0);
+//        http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html
         var a = ["a" , "jfd", "NULL" , "0" , 0 ];
         console.dir(a);
-        var b = Array([5]);
+        var b = Array([5,3,5],[6,2,3]);//2维数组
         console.dir(b);
+//        数组元素的访问.
+        var testGetArrValue = a[1];
+        console.log(testGetArrValue);
+        a[1] = "change";
+        console.dir(a);
+//        数组元素的添加
+        var arrayObj = new Array(0);
+        arrayObj =[1,2,3,4,5,6,7];
+        console.log(arrayObj);
+        console.dir(arrayObj);
+        arrayObj.push(8,9);//在数组尾部添加元素,并返回数组长度.
+        console.dir(arrayObj);
+        arrayObj.unshift(-2,-1);//数组
+        console.dir(arrayObj);
+        arrayObj.splice(insertPos,2,[0]);
+        console.dir(arrayObj);
+
+
+
+
+
+
     }
 
 </script>
