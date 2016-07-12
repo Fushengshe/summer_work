@@ -11,6 +11,7 @@
     window.onload = function () {
 //        js string
         /*
+         http://www.cnblogs.com/fslnet/archive/2013/01/08/2850835.html
          1，属性 length
          2，方法
          charAt
@@ -37,6 +38,18 @@
         var myString1 = "I like javascript!";
         console.dir(myString);
         console.dir(myString1);
+        console.log("++++++++++++字符串拼接++++++++");
+        var myStringL = "every "+"day "+"is "+"new";
+        console.log(myStringL);
+        var myStringL1 = "happly " ;
+        myStringL1 +="raoul";
+        console.log(myStringL1);
+        console.log("++++++++++++截取字符串+++++++++");
+        var myStringSub ="Every day is new!"
+        var session = myStringSub.substring(6);
+        console.log(session);
+
+
 
     }
 </script>
