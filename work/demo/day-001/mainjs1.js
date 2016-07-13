@@ -289,7 +289,7 @@ window.onload=function () {
     //concat:合并字符串
     var Jsa="hello";
     var Jsa1 =" "
-    var Jsb="world";
+    var Jsb=",world";
     var Jsc =Jsa.concat(Jsa1,Jsb);
     console.log(Jsc);
     //indexOf：检索字符串,返回地址,没有返回-1
@@ -297,8 +297,28 @@ window.onload=function () {
     console.log(Jsd);
     //lastIndexOf:逆向检索字符串
     console.log(Jsa.lastIndexOf("o"));
+    //ps:String.indexOf("String",i)表示检索第I次出现该字符的地址
     //charAt:返回指定位置字符.
     console.log(Jsc.charAt(0));
+    console.log("match function&search function");
+    //没有学习正则表达式.暂停
+    var re = new RegExp(/^\w+$/);
+    var is_alpha1 = Jsa.match(re);
+    console.log(is_alpha1);
+    var is_alpha2 = Jsb.match(re);
+    console.log(is_alpha2);
+    var is_alpha3 = Jsa.search(re);
+    console.log(is_alpha3);
+    var is_alpha4 = Jsb.search(re);
+    console.log(is_alpha4);
+    //substr&substring&replace&toUpperCase&toLowerCase...已经学过了。
+    //slice:提取字符串的一部分。同substring
+    //split:字符串数组。类似new String。
+    console.dir(myString1.split(""));
+    console.log("6.过一遍上次在群里发的字符串和数组的练习题")
+
+
+
 
 
 }
