@@ -212,4 +212,93 @@ window.onload=function () {
     var arrayObjTLS2 = arrayObjB.valueOf();
     console.log(arrayObjTLS2);
 //暂时先不深入了解array的三个属性。url(http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html)
+    //        js string
+    /*
+     http://www.cnblogs.com/fslnet/archive/2013/01/08/2850835.html
+     1，属性 length
+     2，方法
+     charAt
+     charCodeAt
+     concat
+     indexof
+     lastIndexOf
+     localeCompare
+     match
+     replace
+     search
+     slice
+     split
+     substr
+     substring
+     toLowerCase
+     toString
+     toUpperCase
+     valueOf
+     静态方法
+     String.fromCharCode
+     */
+    var myString = new String("welcome to study javascript!");
+    var myString1 = "I like javascript!";
+    console.dir(myString);
+    console.dir(myString1);
+    console.log("++++++++++++字符串拼接++++++++");
+    var myStringL = "every "+"day "+"is "+"new";
+    console.log(myStringL);
+    var myStringL1 = "happly " ;
+    myStringL1 +="raoul";
+    console.log(myStringL1);
+    console.log("++++++++++++截取字符串+++++++++");
+    var myStringSub ="0123456789ABCDEF"
+    var session1 = myStringSub.substring(6);//截取第 6 位开始的字符
+    console.log(session1);
+    console.log(myStringSub);
+    var session2 = myStringSub.substring(6,12);//截取第 6 位开始的字符
+    console.log(session2);
+    var session3 = myStringSub.substring(15,5);//负数什么鬼？
+    console.log(session3);
+    console.log("++++++++++++转换大小写+++++++++");
+    var Hello ="Hello";
+    var hello = Hello.toLowerCase();
+    console.log(Hello);
+    console.log(hello);
+    var HELLO = Hello.toUpperCase();
+    console.log(HELLO);
+    console.log("+++++++++++检索字符串+++++++=");
+    var SearchString = myString;
+    console.log(SearchString.indexOf("i"));//return the address of the first time the string can be find.
+    console.log(SearchString.replace("javascript","php"));
+    console.dir(SearchString);
+    /**
+    *8.特殊字符:怎么用？
+     * \b : 后退符 \t : 水平制表符
+     * \n : 换行符 \v : 垂直制表符
+     * \f : 分页符 \r : 回车符
+     * \" : 双引号 \' : 单引号
+     * \\ : 反斜杆
+     */
+    console.log("+++++++++++将字符转换成Unicode编码+++");
+    var code =HELLO.charCodeAt(3);//注意，没有引号。
+    console.log(code);
+    console.log(String.fromCharCode(66));
+    console.log("+++++++++++将字符转换成URL编码+++")
+    var noURL="hello world";
+    var url =encodeURI(noURL);//注意，没有引号。
+    console.log(url);
+    console.log(decodeURI(url));
+    console.log("+++++++++++js字符串函数++++++")
+    //concat:合并字符串
+    var Jsa="hello";
+    var Jsa1 =" "
+    var Jsb="world";
+    var Jsc =Jsa.concat(Jsa1,Jsb);
+    console.log(Jsc);
+    //indexOf：检索字符串,返回地址,没有返回-1
+    var Jsd =Jsa.indexOf("o");
+    console.log(Jsd);
+    //lastIndexOf:逆向检索字符串
+    console.log(Jsa.lastIndexOf("o"));
+    //charAt:返回指定位置字符.
+    console.log(Jsc.charAt(0));
+
+
 }
