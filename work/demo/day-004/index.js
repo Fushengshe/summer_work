@@ -24,5 +24,4 @@ window.onload =function () {
         content.value="";
         oli.innerHTML="";
     }
-
 }
