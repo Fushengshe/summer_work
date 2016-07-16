@@ -47,19 +47,20 @@ p:last-child{
 }
 #lside{
     list-style: none;
-    border: 1px #3c82c0 solid;
+    border: 2px #3c82c0 solid;
     border-radius: 5px;
+    margin-right: 20px;
 
 }
 #lside li{
     width: 300px;
+    cursor: pointer;
     margin: 0 0 -1px;
     height: 30px;
     list-style-type: none;
     text-align: center;
-    border: 1px #3c82c0 solid;
-    border-left:0;
-    border-right:0;
+    border-bottom: 1px #3c82c0 solid;
+
 }
 li:first-child{
     border-top:0 ;
@@ -68,7 +69,8 @@ li:last-child{
     border-bottom:0 ;
 }
 #rside{
-    margin-left:20px;
+    /*margin-left:20px;*/
+    /*clear: both;*/
     width: 600px;
     text-align: left;
 }
