@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,inital-scale=1" />
+    <meta charset="UTF-8">
+    <title>Responsive Web Design[false]</title>
+    <!--[if lt IE 9]>
+
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+    <![endif]-->
+    <style>
+        /*img { width: auto; max-width: 100%; }*/
+        @media (min-device-width: 500px) {
+            img[data-src-500px]{
+                content: attr(data-src-500px, url);
+            }
+        }
+        @media (min-device-width: 1000px) {
+            img[data-src-1000px]{
+                content: attr(data-src-1000px, url);
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="todo_list_full.jpg" data-src-500px="todo_list_mobile.jpg" data-src-1000px="todo_list_full.jpg" alt="Responsive Web Design">
+</body>
+</html>

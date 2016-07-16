@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <head>
     <meta charset="UTF-8">
     <title>响应式布局</title>
+    <!--第一种实现方式-->
     <style>
         body{
             background-image:url("todo_list_mobile.jpg");
@@ -23,11 +23,12 @@
 
     <![endif]-->
 </head>
-<body style="width: 100vw;height: 100vh;">
-<!--<picture alt="image description">-->
-    <!--<source src="todo_list_full.jpg" alt="响应式图片的3种解决方案" media="(min-width: 600px)">-->
-    <!--<source src="todo_list_mobile.jpg" alt="响应式图片的3种解决方案" media="(min-width: 800px)">-->
-    <!--<img src="todo_list_full.jpg" alt="响应式图片的3种解决方案" alt="image description">-->
-<!--</picture>-->
+<body>
+<!--第二种实现方式-->
+<picture>
+    <source media="(max-width:1000px)" srcset="todo_list_mobile.jpg">
+    <source media="(min-width:1000px)" srcset="todo_list_full.jpg">
+    <img src="todo_list_mobile.jpg" alt="">
+</picture>
 </body>
 </html>
