@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.fl{
+    float: left;
+}
+body{
+    margin: 0 auto;
+    width: 1200px;
+}
+#header{
+    padding:10px 50px;
+    color:white ;
+}
+#main{
+    margin-top:50px ;
+    margin-left: 100px;
+}
+input{
+    display: block;
+    float: right;
+    padding: 0 5px;
+    margin-right: 100px;
+    width: 400px;
+    height: 20px;
+    border: 1px #3c82c0 solid;
+    border-radius: 2px;
+}
+label{
+    font-size: 20px;
+}
+p{
+    width: 600px;
+    margin: 0 0 15px 100px;
+}
+
+p:last-child{
+    height: 100px;
+}
+#content{
+    height: 100px;
+}
+#header{
+    background: #3c82c0;
+    height: 50px;
+}
+#lside{
+    list-style: none;
+    border: 1px #3c82c0 solid;
+    border-radius: 5px;
+
+}
+#lside li{
+    width: 300px;
+    margin: 0 0 -1px;
+    height: 30px;
+    list-style-type: none;
+    text-align: center;
+    border: 1px #3c82c0 solid;
+    border-left:0;
+    border-right:0;
+}
+li:first-child{
+    border-top:0 ;
+}
+li:last-child{
+    border-bottom:0 ;
+}
+#rside{
+    margin-left:20px;
+    width: 600px;
+    text-align: left;
+}
+button{
+    width: 100px;
+    background-color: #3c82c0;
+    height: 30px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    border: 0;
+}
+button:hover{
+    background-color: white;
+    color: #3c82c0;
+}
