@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局</title>
+    <style>
+        body{
+            background-image:url("todo_list_mobile.jpg");
+            background-repeat: no-repeat;
+        }
+        @media screen and (min-width: 1000px){
+            body{
+                background-image:url("todo_list_full.jpg") ;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+    <!--[if lt IE 9]>
+
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+    <![endif]-->
+</head>
+<body style="width: 100vw;height: 100vh;">
+<!--<picture alt="image description">-->
+    <!--<source src="todo_list_full.jpg" alt="响应式图片的3种解决方案" media="(min-width: 600px)">-->
+    <!--<source src="todo_list_mobile.jpg" alt="响应式图片的3种解决方案" media="(min-width: 800px)">-->
+    <!--<img src="todo_list_full.jpg" alt="响应式图片的3种解决方案" alt="image description">-->
+<!--</picture>-->
+</body>
+</html>
