@@ -62,9 +62,6 @@ p:last-child{
     border-bottom: 1px #3c82c0 solid;
 
 }
-li span {
-    margin-right: 15px;
-}
 li:first-child{
     border-top:0 ;
 }
