@@ -18,7 +18,7 @@
 
  任务：1.完成数组常用方法
  */
-window.onload=function () {
+
     //1.了解JS变量的声明。
     var name = "Raoul";
     console.dir(name);
@@ -315,10 +315,4 @@ window.onload=function () {
     //slice:提取字符串的一部分。同substring
     //split:字符串数组。类似new String。
     console.dir(myString1.split(""));
-    console.log("6.过一遍上次在群里发的字符串和数组的练习题")
-
-
-
-
-
-}
+    console.log("6.过一遍上次在群里发的字符串和数组的练习题");
