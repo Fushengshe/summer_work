@@ -26,7 +26,6 @@
             }
             alert("请填写完整！");
         }else{
-            var oLi =document.createElement("li");
             oLi.setAttribute("title",title.value);
             oLi.setAttribute("time",time.value);
             oLi.setAttribute("content",content.value);
