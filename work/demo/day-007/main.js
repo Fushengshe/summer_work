@@ -57,7 +57,7 @@
         time.value="";
         title.value="";
         content.value="";
-        // localStorage.clear();
+        localStorage.clear();
         console.log(localStorage);
         console.log(oLi.length);
             if(oUl.firstElementChild===oUl.lastElementChild){

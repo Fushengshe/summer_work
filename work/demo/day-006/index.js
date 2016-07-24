@@ -19,7 +19,7 @@ oBun[0].onclick =function () {
     if (confirmP ==null ||confirmU !=null){
         alert("输入不合法");
     }else {
-        window.open('../day-004/index.html');
+        window.open('../day-004/main.html');
     }
 }
 }
