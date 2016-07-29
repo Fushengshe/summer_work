@@ -25,6 +25,7 @@
                 if(oInput[n].value==""){
                     oInput[n].style.backgroundColor="red";
                 }
+
             }
             alert("请填写完整！");
         }else{
