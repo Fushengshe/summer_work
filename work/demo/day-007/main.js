@@ -7,8 +7,9 @@
     var oBun = document.getElementsByTagName("button");
     var oUl =document.getElementsByTagName("ul")[0];
     var oInput =document.getElementsByTagName("input");
-    // var oLi = document.getElementsByTagName("li");
+    var oLi = document.getElementsByTagName("li");
     var ii =localStorage.getItem("num");
+    console.dir(localStorage);
         function clearColor() {
         for (var n =0; n<oInput.length;n++){
             // oInput[n].style.backgroundColor="";
@@ -41,40 +42,22 @@
             var oSpan1 = document.createElement("span");
             oLi.appendChild(oSpan1);
             oSpan1.innerHTML=localStorage.getItem("time"+[ii]);
+            oLi.setAttribute("content",content.value);
+            oLi.setAttribute("title",title.value);
+            oLi.setAttribute("time",time.value);
             //将input中的字符串设置为li的属性，并显示
             oLi.addEventListener('click',function () {
-                oInput[0].value=localStorage.getItem("title"+[ii]);
-                oInput[1].value=localStorage.getItem("time"+[ii]);
-                oInput[2].value =localStorage.getItem("content"+[ii]);
-
-                clearColor();
+                oInput[0].value=oLi.getAttribute("time");
+                oInput[1].value=oLi.getAttribute("title");
+                oInput[2].value =oLi.getAttribute("content");
+                // clearColor();
             },false);
             oUl.appendChild(oLi);
             // clearColor();
         }
     };
-    function set(i) {
-    var oLi =document.createElement("li");
-    var oSpan = document.createElement("span");
-    oLi.appendChild(oSpan);
-    oSpan.innerHTML=localStorage.getItem("title"+[i]);
-    var oSpan1 = document.createElement("span");
-    oLi.appendChild(oSpan1);
-    oSpan1.innerHTML=localStorage.getItem("time"+[i]);
-    //将input中的字符串设置为li的属性，并显示
-    oLi.addEventListener('click',function () {
-        oInput[0].value=localStorage.getItem("title"+[i]);
-        oInput[1].value=localStorage.getItem("time"+[i]);
-        oInput[2].value =localStorage.getItem("content"+[i]);
-        clearColor();
-    },false);
-    oUl.appendChild(oLi);
-    clearColor();
-};
-
     oBun[1].onclick =function () {
         time.value="";
-
         title.value="";
         content.value="";
         localStorage.clear();
@@ -89,7 +72,26 @@
             }
         clearColor();
     };
-    for(var i = 1; i<= localStorage.getItem("num");i++){
-        set(i);
+    for(var i = 1; i<= ii;i++){
+    // var oLi = document.createElement("li");
+    var oLi =document.createElement("li");
+    var oSpan = document.createElement("span");
+    oLi.appendChild(oSpan);
+    oSpan.innerHTML=localStorage.getItem("title"+[i]);
+    var oSpan1 = document.createElement("span");
+    oLi.appendChild(oSpan1);
+    oSpan1.innerHTML=localStorage.getItem("time"+[i]);
+        oLi.setAttribute("content",localStorage.getItem("content"+[i]));
+        oLi.setAttribute("title",localStorage.getItem("title"+[i]));
+        oLi.setAttribute("time",localStorage.getItem("time"+[i]));
+    //将input中的字符串设置为li的属性，并显示
+    oLi.addEventListener('click',function () {
+        oInput[0].value=this.getAttribute("time");
+        oInput[1].value=this.getAttribute("title");
+        oInput[2].value =this.getAttribute("content");
+        // clearColor();
+    },false);
+    oUl.appendChild(oLi);
+    // clearColor();
 };//实现使用localstorage存储数据。
 
