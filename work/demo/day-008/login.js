@@ -17,4 +17,5 @@ request.onreadystatechange =function () {
         }
     }
 };
+
 console.log(res);
