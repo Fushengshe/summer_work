@@ -7,7 +7,7 @@
     var oBun = document.getElementsByTagName("button");
     var oUl =document.getElementsByTagName("ul")[0];
     var oInput =document.getElementsByTagName("input");
-    var oLi = document.getElementsByTagName("li");
+    // var oLi = document.getElementsByTagName("li");
     var ii =localStorage.getItem("num");
     console.dir(localStorage);
         function clearColor() {
@@ -48,8 +48,8 @@
             oLi.setAttribute("time",time.value);
             //将input中的字符串设置为li的属性，并显示
             oLi.addEventListener('click',function () {
-                oInput[0].value=oLi.getAttribute("time");
-                oInput[1].value=oLi.getAttribute("title");
+                oInput[0].value=oLi.getAttribute("title");
+                oInput[1].value=oLi.getAttribute("time");
                 oInput[2].value =oLi.getAttribute("content");
                 // clearColor();
             },false);
@@ -87,8 +87,8 @@
         oLi.setAttribute("time",localStorage.getItem("time"+[i]));
     //将input中的字符串设置为li的属性，并显示
     oLi.addEventListener('click',function () {
-        oInput[0].value=this.getAttribute("time");
-        oInput[1].value=this.getAttribute("title");
+        oInput[0].value=this.getAttribute("title");
+        oInput[1].value=this.getAttribute("time");
         oInput[2].value =this.getAttribute("content");
         // clearColor();
     },false);
