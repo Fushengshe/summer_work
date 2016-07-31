@@ -9,7 +9,7 @@ fetch('http://api.neuqstlab.qoder.cn/users/login',{
     },
     body: JSON.stringify({
         name: 'test',
-        paddword: '123456',
+        paddword: '123456'
     })
 }).then(function(res){
     return res.json();
