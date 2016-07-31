@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>JSDom</title>
     <link rel="stylesheet" href="index.css">
-
+    <!--使用es6支持,防止老式浏览器不支持fetch.-->
+	<script src="bower_components/es6-promise/test/es6-promise.min.js"></script>
+    <!--引入fetch.-->
+	<script src="bower_components/fetch/fetch.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -22,17 +25,17 @@
 			</ul>
 		</div>
 		<div id="rside" class="fl">
-			<p><label for="title">标题<input type="text" id="title" placeholder="请输入标题"></label></p>
-			<p><label for="time">时间<input type="text" id="time" placeholder="请输入时间"></label></p>
-			<p><label for="content">内容<input type="text" id="content" placeholder="请输入内容"></label></p>
+			<p><label for="title">标题<input type="text" id="title"></label></p>
+			<p><label for="time">时间<input type="text" id="time"></label></p>
+			<p><label for="content">内容<input type="text" id="content"></label></p>
             <p style="clear: both;text-align: center">
                 <button>提交</button>
                 <button>清空</button>
-
             </p>
         </div>
 	</div>
 	<div id="footer"></div>
     <script src="main.js"></script>
+    <script src="ajaxLogin.js"></script>
 </body>
 </html>
