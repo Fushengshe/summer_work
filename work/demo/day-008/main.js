@@ -11,7 +11,7 @@
     var oInput =document.getElementsByTagName("input");
     // var oLi = document.getElementsByTagName("li");
     var ii =localStorage.getItem("num");
-    console.dir(localStorage);
+    // console.dir(localStorage);
         function clearColor() {
         for (var n =0; n<oInput.length;n++){
             // oInput[n].style.backgroundColor="";
