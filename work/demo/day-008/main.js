@@ -6,22 +6,24 @@
     var title =document.getElementById("title");
     var time =document.getElementById("time");
     var content =document.getElementById("content");
-    var oBun = document.getElementsByTagName("button");
+    var oBun = document.getElementById("rside").getElementsByTagName("button");
     var oUl =document.getElementsByTagName("ul")[0];
-    var oInput =document.getElementsByTagName("input");
-    // var oLi = document.getElementsByTagName("li");
+    var oInput =document.getElementById("rside").getElementsByTagName("input");
+    var oLi = document.getElementsByTagName("li");
     var ii =localStorage.getItem("num");
     // console.dir(localStorage);
         function clearColor() {
         for (var n =0; n<oInput.length;n++){
             // oInput[n].style.backgroundColor="";
             oInput[n].index = n;
+            oInput[n].style.backgroundColor="";
             oInput[n].onblur =function () {
                 this.style.backgroundColor="";
             }
         }
     }
     oBun[0].onclick =function () {
+        clearColor();
         if(time.value==""||title.value==""||content.value==""){
             for (var n =0; n<oInput.length;n++){
                 if(oInput[n].value==""){
@@ -55,18 +57,18 @@
                 oInput[0].value=oLi.getAttribute("title");
                 oInput[1].value=oLi.getAttribute("time");
                 oInput[2].value =oLi.getAttribute("content");
-                clearColor();
             },false);
             oUl.appendChild(oLi);
-            clearColor();
         }
     };
     oBun[1].onclick =function () {
         time.value="";
         title.value="";
         content.value="";
+        var tmp =localStorage.id;
         localStorage.clear();
-        // console.log(localStorage);
+        localStorage.id =tmp;
+        console.log(localStorage);
         console.log(oLi.length);
             if(oUl.firstElementChild===oUl.lastElementChild){
                 alert("不可以清除了");

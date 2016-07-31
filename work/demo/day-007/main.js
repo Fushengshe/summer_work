@@ -14,12 +14,14 @@
         for (var n =0; n<oInput.length;n++){
             // oInput[n].style.backgroundColor="";
             oInput[n].index = n;
+            oInput[n].style.backgroundColor="";
             oInput[n].onblur =function () {
                 this.style.backgroundColor="";
             }
         }
     }
     oBun[0].onclick =function () {
+        clearColor();
         if(time.value==""||title.value==""||content.value==""){
             for (var n =0; n<oInput.length;n++){
                 if(oInput[n].value==""){
@@ -51,13 +53,12 @@
                 oInput[0].value=oLi.getAttribute("title");
                 oInput[1].value=oLi.getAttribute("time");
                 oInput[2].value =oLi.getAttribute("content");
-                // clearColor();
             },false);
             oUl.appendChild(oLi);
-            // clearColor();
         }
     };
     oBun[1].onclick =function () {
+        clearColor();
         time.value="";
         title.value="";
         content.value="";
@@ -71,7 +72,6 @@
                     oUl.removeChild(oUl.lastChild);
                 }
             }
-        clearColor();
     };
     for(var i = 1; i<= ii;i++){
     // var oLi = document.createElement("li");
