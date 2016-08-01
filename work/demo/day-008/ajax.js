@@ -24,8 +24,6 @@ function GETTodo() {
     var request =new XMLHttpRequest();
     var res = new Array(0);
     request.open("GET","http://api.neuqstlab.qoder.cn/users/todos/:"+localStorage.getItem("id"));
-//需要把整个数组拉取到，keyword怎么写？
-// var data = "name=test"+"&password=123456";
 // request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     request.send();
     request.onreadystatechange =function () {
@@ -42,13 +40,10 @@ function GETTodo() {
 function addItem() {
     var request =new XMLHttpRequest();
     request.open("POST", "http://api.neuqstlab.qoder.cn/users/todos/:"+localStorage.id);
+     //var data="title=1&time=1&content=1";
     // var data ="title:"+oInput[0].value+"&time:"+oInput[1].value+"&content:"+oInput[2].value;
-    // fileds:{
-    //     title:String,
-    //         time:String,
-    //         content:String
-    // }
-    var data ={"fileds":[{"title":"oInput[0].value"},{"time":"oInput[1].value"},{"content":"oInput[2].value"}]};
+    // var data ={"fileds":[{"title":oInput[0].value},{"time":oInput[1].value},{"content":oInput[2].value}]};
+    var data = JSON.stringify({title:oInput[0].value, time:oInput[1].value, content: oInput[2].value});
     request.setRequestHeader("Content-Type","application/x-www-form urlencoded");
     request.send(data);
     request.onreadystatechange = function () {
