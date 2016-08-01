@@ -56,6 +56,7 @@ function addItem() {
             time:'16:25',
             content:'I need help!!!!!'
         })
+
     }).then(function(res){
         return res.json();
     }).then(function(json){
