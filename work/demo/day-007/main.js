@@ -73,7 +73,6 @@
                 }
             }
     };
-
     for(var i = 1; i<= ii;i++){
     // var oLi = document.createElement("li");
     var oLi =document.createElement("li");
