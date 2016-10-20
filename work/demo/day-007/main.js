@@ -20,6 +20,7 @@
             }
         }
     }
+
     oBun[0].onclick =function () {
         clearColor();
         if(time.value==""||title.value==""||content.value==""){
