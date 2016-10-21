@@ -21,6 +21,7 @@ function fetchLogin() {
         console.log(json);
         localStorage.id = json.data.id;
     });
+
 }
 var login =document.getElementById("logo").getElementsByTagName("h1")[0];
     login.onclick =function () {
