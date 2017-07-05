@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSDom</title>
+    <link rel="stylesheet" href="index.css">
+    <!--使用es6支持,防止老式浏览器不支持fetch.-->
+	<script src="bower_components/es6-promise/test/es6-promise.min.js"></script>
+    <!--引入fetch.-->
+	<script src="bower_components/fetch/fetch.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<h1 style="cursor: pointer" alt="login">
+				TODO-day-008
+			</h1>
+		</div>
+	</div>
+	<div id="main">
+	<div id="lside" class="fl">
+
+		<ul>
+				<li><h3 style="line-height: 30px;">事&nbsp;项</h3></li>
+			</ul>
+		</div>
+		<div id="rside" class="fl">
+			<p><label for="title">标题<input type="text" id="title"></label></p>
+			<p><label for="time">时间<input type="text" id="time"></label></p>
+			<p><label for="content">内容<input type="text" id="content"></label></p>
+            <p style="clear: both;text-align: center">
+                <button>提交</button>
+                <button>清空</button>
+            </p>
+            <p style="clear: both;text-align: center">
+                <button>拉取</button>
+                <button>添加</button>
+                <button>删除</button>
+            </p>
+        </div>
+	</div>
+	<div id="footer"></div>
+    <script>
+    </script>
+    <script src="main.js"></script>
+    <!--<script src="ajax.js"></script>-->
+    <script src="fetch.js"></script>
+    <script type="text/javascript"></script>
+</body>
+</html>
